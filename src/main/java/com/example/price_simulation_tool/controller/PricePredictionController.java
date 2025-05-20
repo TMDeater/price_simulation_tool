@@ -20,8 +20,7 @@ public class PricePredictionController {
     @GetMapping("/calculate")
     public BigDecimal calculatePredictedPrice(
             @RequestParam BigDecimal initialPrice,
-            @RequestParam BigDecimal time,
-            @RequestParam BigDecimal randomShock) {
-        return pricePredictionService.calculatePredictedPrice(initialPrice, time, randomShock);
+            @RequestParam BigDecimal time) {
+        return pricePredictionService.calculatePredictedPrice(initialPrice, time);
     }
 }
